@@ -1,7 +1,7 @@
 from langchain.text_splitter import CharacterTextSplitter
 from langchain.schema.document import Document
 text_splitter = CharacterTextSplitter(chunk_size=100, chunk_overlap=20)
-text = "I am going to tell you a story about Tintin."
+text = "I am going to tell you a story about Netanel. Netanel is 39 yaers old"
 docs = [Document(page_content=x) for x in text_splitter.split_text(text)]
 
 
