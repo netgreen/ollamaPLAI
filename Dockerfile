@@ -12,8 +12,7 @@ RUN pip install langchain langchain-community langchain-core beautifulsoup4 tikt
 
 COPY app/model.py /app/.
 COPY app/main.py /app/.
+COPY app/regDic.txt /app/.
 
 EXPOSE 11434 8000
-
-# CMD ["fastapi", "dev", "main.py"]
 

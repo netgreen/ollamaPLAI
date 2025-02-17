@@ -9,8 +9,17 @@ def hello_world():
 
 @app.route('/setRegText', methods=['POST'])
 def setRegText():
+	regJson = request.get_json();
+	regText = regJson['regText'];
 	
-	return jsonify(""), 200;
+	f = open("/app/regDic.txt", "w")
+	f.write(regText)
+	f.close()
+	
+	init()
+	init_conversation()
+	
+	return jsonify(regText), 200;
     
 @app.route('/askQuestion', methods=['POST'])
 def askQuestion():

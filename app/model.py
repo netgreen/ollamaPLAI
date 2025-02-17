@@ -15,9 +15,11 @@ global rag_chain
 rag_chain = None
 
 def init():
+	f = open("/app/regDic.txt", "r")
+	text = f.read()
+
 	global retriever
 	text_splitter = CharacterTextSplitter(chunk_size=500, chunk_overlap=100)
-	text = "I am going to tell you a story about Netanel. Netanel is 39 yaers old"
 	docs = [Document(page_content=x) for x in text_splitter.split_text(text)]
 
 	persist_directory = "/tmp/chromadb"
