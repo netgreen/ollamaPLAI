@@ -10,8 +10,8 @@ RUN pip install Flask
 
 RUN pip install langchain langchain-community langchain-core beautifulsoup4 tiktoken chromadb langchain-ollama
 
-COPY app.py /.
-COPY main.py /.
+COPY app/model.py /app/.
+COPY app/main.py /app/.
 
 EXPOSE 11434 8000
 
