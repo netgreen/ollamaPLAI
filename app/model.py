@@ -19,7 +19,7 @@ def init():
 	text = f.read()
 
 	global retriever
-	text_splitter = CharacterTextSplitter(chunk_size=500, chunk_overlap=100)
+	text_splitter = CharacterTextSplitter(chunk_size=70, chunk_overlap=20)
 	docs = [Document(page_content=x) for x in text_splitter.split_text(text)]
 
 	persist_directory = "/tmp/chromadb"
