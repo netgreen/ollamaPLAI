@@ -19,7 +19,7 @@ def setRegText():
 	init()
 	init_conversation()
 	
-	return jsonify(regText), 200;
+	return jsonify("setRegText success"), 200;
     
 @app.route('/askQuestion', methods=['POST'])
 def askQuestion():
